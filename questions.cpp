@@ -1,20 +1,17 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "Prime numbers from 1 to 100 are: " << endl;
-
-    for (int i = 2; i <= 100; i++) {
-        int j;
-        for (j = 2; j < i; j++) {
-            if (i % j == 0) {
-                break; 
-            }
-        }
-        if (j == i) { 
-            cout << i << " ";
-        }
-    }
-
-    cout << endl;
+    int number,sum=0, reverse=0,digit;
+    cout<<"Enter a number";
+    cin>>number;
+    int temp=number;
+    do{
+        digit=temp%10;
+        sum+=digit;
+        reverse=reverse*10+digit;
+        temp /=10;
+    }while (temp>0);
+    cout<<"Sum of digits: "<<sum<<endl;
+    cout<<"Reverse of the number"<<reverse<<endl;
     return 0;
 }
