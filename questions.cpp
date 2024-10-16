@@ -1,13 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main()
-{
-    for(int i=1; i<=4;i++){
-        for(int j=1; j<=i; j++){
-    cout<<i;
+int main() {
+    cout << "Prime numbers from 1 to 100 are: " << endl;
+
+    for (int i = 2; i <= 100; i++) {
+        int j;
+        for (j = 2; j < i; j++) {
+            if (i % j == 0) {
+                break; 
+            }
         }
-     cout<<endl;   
-    
+        if (j == i) { 
+            cout << i << " ";
+        }
     }
+
+    cout << endl;
     return 0;
 }
