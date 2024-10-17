@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int number,sum=0, reverse=0,digit;
-    cout<<"Enter a number";
-    cin>>number;
-    int temp=number;
-    do{
-        digit=temp%10;
-        sum+=digit;
-        reverse=reverse*10+digit;
-        temp /=10;
-    }while (temp>0);
-    cout<<"Sum of digits: "<<sum<<endl;
-    cout<<"Reverse of the number"<<reverse<<endl;
-    return 0;
+cout<<"Armstrong numbers between 1 and 100";
+for(int i=1; i<=1000; i++){
+    int sum=0;
+    int temp=i;
+    while(temp>0){
+        int digit=temp%10;
+        sum+=digit*digit*digit;
+        temp/=10;
+    
+    }
+    if (sum==i){
+        cout<<i<<endl;
+    }
+}
+return 0;
 }
