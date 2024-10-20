@@ -1,19 +1,21 @@
 #include <iostream>
 using namespace std;
-int main() {
-cout<<"Armstrong numbers between 1 and 100";
-for(int i=1; i<=1000; i++){
-    int sum=0;
-    int temp=i;
-    while(temp>0){
-        int digit=temp%10;
-        sum+=digit*digit*digit;
-        temp/=10;
-    
-    }
-    if (sum==i){
-        cout<<i<<endl;
-    }
-}
-return 0;
+int main()
+{
+int num1=8;
+double num2=6.6;
+float num3=3.9;
+
+double result1=num1*num2;
+double finalresult=result1+num3;
+cout<<"Before typecasting: "<<double(result1)<<endl;
+cout<<"After typecasting: "<<int(result1)<<endl;
+cout<<"Integer: "<<num1<<endl;
+cout<<"Double: "<<num2<<endl;
+cout<<"Float: "<<num3<<endl;
+cout<<"Multiplication Result: "<<result1<<endl;
+cout<<"Final Result"<<finalresult<<endl;
+
+
+    return 0;
 }
