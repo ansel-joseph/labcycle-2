@@ -1,22 +1,30 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    cout<<"Enter three numbers";
-int num1,num2,num3,sum,difference,product;
-cin>>num1>>num2>>num3;
-sum=num1+num2+num3;
-difference=num1-num2-num3;
-product=num1*num2*num3;
-cout<<"The sum is "<<sum<<endl;
-cout<<"The product is "<<product<<endl;
-cout<<"The difference is "<<difference<<endl;
-if(sum>product){
-cout<<"Sum is greater "<<endl;
-}else if(product>sum){
-    cout<<"Product is greater";
-}else{
-    cout<<"Both the sum and product are equal";
-}
+
+int main() {
+    int n, target;
+
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int arr[n];
+
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    cout << "Enter the element to search: ";
+    cin >> target;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target) {
+            cout << "Element found at index: " << i << endl;
+            return 0;
+        }
+    }
+
+    cout << "Element not found in the array." << endl;
+
     return 0;
 }
