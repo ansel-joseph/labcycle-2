@@ -2,20 +2,38 @@
 using namespace std;
 
 int main() {
-    int n, sum = 0;
+    int rows, cols;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    cout << "Enter number of columns: ";
+    cin >> cols;
 
-    int arr[n];
+    int matrix[rows][cols], transpose[cols][rows];
 
-    cout << "Enter the elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-        sum += arr[i]; 
+
+    cout << "Enter elements of the matrix row-wise:\n";
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            cin >> matrix[i][j];
+        }
     }
 
-    cout << "Sum of elements in the array: " << sum << endl;
+
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+
+    cout << "\nTranspose of the matrix:\n";
+    for (int i = 0; i < cols; ++i) {
+        for (int j = 0; j < rows; ++j) {
+            cout << transpose[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
